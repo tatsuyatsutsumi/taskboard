@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # ここに追加する
-  # presence: true でnameカラムが空白かどうか検証する
+  has_many :lists, dependent: :destroy
+
   validates :name, presence: true
 end
