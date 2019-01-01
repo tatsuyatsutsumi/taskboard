@@ -30,15 +30,25 @@
             font-size: 18px;
             color: #8c8c8c;
           }
-
-          /* ==========ここから追加する========== */
           .fa-trash {
             margin-right: 10px;
           }
-          /* ==========ここまで追加する========== */
-
         }
       }
+
+      /* ==========ここから追加する========== */
+      .cardWrapper {
+        overflow-y: scroll;
+        max-height: 76vh;
+        .addCard {
+          color: #8c8c8c;
+          &_link {
+            color: #8c8c8c;
+          }
+        }
+      }
+      /* ==========ここまで追加する========== */
+
     }
   }
 }

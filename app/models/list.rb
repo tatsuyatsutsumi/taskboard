@@ -1,5 +1,7 @@
 class List < ApplicationRecord
   belongs_to :user
-  # ここに追加する
+  # ここにアソシエーションを追加する
+  has_many :cards, dependent: :destroy
+
   validates :title, length: { in: 1..255 }
 end
