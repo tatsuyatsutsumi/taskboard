@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Taskboard</title>
+    <title>Taskboard(kanban)</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1" >
@@ -17,12 +17,12 @@
       <div class="alert alert-danger"><%= flash[:alert] %></div>
     <% end %>
 
-    <%# ログアウトリンクは_header.html.erbに書いていくので削除する %>
-    <%# ==========ここから編集する========== %>
+    
+    
     <% if user_signed_in? %>
       <%= render partial: "layouts/header" %>
     <% end %>
-    <%# ==========ここまで編集する========== %>
+    
 
     <%= yield %>
   </body>
