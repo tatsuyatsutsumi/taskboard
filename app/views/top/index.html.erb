@@ -12,9 +12,9 @@
         <div class="cardWrapper">
           <% list.cards.each do |card| %>
 
-            <!-- ==========ここを追加する========== -->
+
             <%= link_to list_card_path(list, card), class:"cardDetail_link" do %>
-            <!-- ================================ -->
+            
 
               <div class="card">
                 <h3 class="card_title"><%= card.title %></h3>
@@ -23,9 +23,9 @@
                 <% end %>
               </div>
 
-            <!-- ==========ここのendを追加する========== -->
+            
             <% end %>
-            <!-- ====================================== -->
+            
 
           <% end %>
           <div class="addCard">
