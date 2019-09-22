@@ -1,7 +1,6 @@
 <div class='signinPage'>
   <div class='container'>
-    <h2 class="title">Taskboardにログイン</h2>
-    <div class="text-center m-3">or</div>
+    <h1 class="title">Taskboard</h1><br><br>
    <div class="text-center"><%= render "devise/shared/links" %></div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
@@ -12,10 +11,18 @@
       <div class="form-group">
         <%= f.label :password %><br />
         <%= f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"  %>
-      </div>
+      </div<br><br><br><br>
 
       <div class="form-group text-center">
-        <%= f.submit "ログインする", class: "loginBtn" %>
+        <%= f.submit "会員ログイン", class: "btn btn-primary" %>&nbsp;&nbsp;&nbsp;
+        <%= link_to "アカウント登録", new_registration_path(resource_name), class: "btn btn-success" %> <br> <br>
+      </div>
+    <% end %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group text-center">
+        <%= f.hidden_field :email, value: "tester@example.jp" %>
+        <%= f.hidden_field :password, value: "tester" %>
+        <%= f.submit "簡単ログイン", class: "btn btn-warning"%> <br> <br>
       </div>
     <% end %>
   </div>

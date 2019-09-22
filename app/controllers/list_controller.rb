@@ -1,5 +1,4 @@
 class ListController < ApplicationController
-  # destroyアクションを追加する
   before_action :set_list, only: %i(edit update destroy)
 
   def new
@@ -15,7 +14,7 @@ class ListController < ApplicationController
       render action: :new
     end
   end
-
+  
   def edit
   end
 
@@ -28,12 +27,10 @@ class ListController < ApplicationController
     end
   end
 
-  # ==========ここから追加する==========
   def destroy
     @list.destroy
     redirect_to :root
   end
-  # ==========ここまで追加する==========
 
   private
     def list_params

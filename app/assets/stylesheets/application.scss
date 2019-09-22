@@ -16,5 +16,41 @@
 @import "top";
 @import "card/new";
 @import "card/show";
-/* ここに追加する */
 @import "card/edit";
+
+.sinupPage {
+  margin-top: 0vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 60vh;
+  background-image: url("/tree-838667.jpg");
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.sinupPage .titleArea {
+  color: #000;
+  font-family: BlinkMacSystemFont;
+  text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+  1px -1px 0 #ffffff, 0px 1px 0 #ffffff, -1px 0 #ffffff, -1px 0 0 #ffffff, 1px 0 0 #ffffff;
+}
+
+.signinPage {
+  margin-top: 0vh;
+  padding-top: 30px;
+  min-height: 60vh;
+  background-image: url("/tree-838667.jpg");
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.signinPage .container .title {
+  color: #000;
+  font-family: BlinkMacSystemFont;
+  text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+  1px -1px 0 #ffffff, 0px 1px 0 #ffffff, -1px 0 #ffffff, -1px 0 0 #ffffff, 1px 0 0 #ffffff;
+}
+
+.form-group {
+  color: #fff;
+}

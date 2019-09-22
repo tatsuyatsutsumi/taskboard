@@ -1,16 +1,16 @@
 <div class="cardnewPgae">
   <div class='container'>
-    <%= form_with model: @card, url: { action: :create }, html: { class: 'cardnewForm' } do |f| %>
+    <%= form_with model: @card, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
       <%= f.hidden_field :list_id, value: @list.id %>
       <% if @card.errors.any? %>
-        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        <p class="text-danger">カード名は1～255文字以内で入力してください</p>
       <% end %>
       <div class="cardnewForm_title">
-        <%= f.label :title %>
+        <%= f.label :カード名 %>
         <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名" %>
       </div>
       <div class="cardnewForm_memo">
-        <%= f.label :memo %>
+        <%= f.label :メモ %>
         <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %>
       <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
       </div>

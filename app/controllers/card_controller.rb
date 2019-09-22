@@ -7,6 +7,7 @@ class CardController < ApplicationController
   end
 
   def create
+    @list = List.find_by(id: params[:list_id])
     @card = Card.new(card_params)
     if @card.save
       redirect_to :root
@@ -20,11 +21,11 @@ class CardController < ApplicationController
   end
 
   def edit
-    # ここに追加する
     @lists = List.where(user: current_user)
   end
 
   def update
+    @lists = List.where(user: current_user)
     if @card.update_attributes(card_params)
       redirect_to :root
     else

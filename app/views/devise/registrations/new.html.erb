@@ -1,12 +1,11 @@
 <div class="sinupPage">
   <div class="titleArea">
-    <h1>アカウントを新規作成</h1>
-    <div class="m-3">or</div>
+    <h1>アカウント登録</h1>
     <%= render "devise/shared/links" %>
   </div>
   <div class='container'>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "mt-5, signupForm" }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= devise_error_messages %>
       <div class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control", placeholder: "名前を入力してください" %>
@@ -27,7 +26,15 @@
         <%= f.password_field :password_confirmation, class:"form-control", placeholder: "パスワードを再度入力してください", autocomplete: "off" %>
       </div>
       <div class="text-center">
-        <%= f.submit "アカウントを作成", class: "btn submitBtn" %>
+        <%= f.submit "アカウント登録", class: "btn btn-success" %><br><br><br>
+      </div>
+    <% end %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group text-center">
+        <%= link_to "会員ログイン", new_session_path(resource_name), class: "btn btn-primary" %>&nbsp;&nbsp;;&nbsp;
+        <%= f.hidden_field :email, value: "tester@example.jp" %>
+        <%= f.hidden_field :password, value: "tester" %>
+        <%= f.submit "簡単ログイン", class: "btn btn-warning"%>
       </div>
     <% end %>
   </div>
