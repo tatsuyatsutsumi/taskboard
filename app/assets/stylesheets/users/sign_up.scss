@@ -12,6 +12,10 @@ body {
   .titleArea {
     text-align: center;
     h1 {font-size: 2rem;}
+    .title_al {
+      color: #fff;
+      text-shadow: 0 8px #000;
+    }
   }
   .signupForm {
     .form-group {
