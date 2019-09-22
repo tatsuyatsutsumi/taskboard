@@ -32,10 +32,11 @@
         .listNew {
           &:after {
             font-family: "Font Awesome 5 Free";
-            content: "\f044";
+            content: "\f303";
             display: inline-block;
             margin-left: 10px;
             font-size: 20px;
+            font-weight: 900;
           }
         }
       }
