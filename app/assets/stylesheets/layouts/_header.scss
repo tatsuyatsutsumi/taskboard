@@ -22,8 +22,11 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 25px;
+        font-size: 28px;
         font-weight: bold;
+        font-family: 'Lobster', cursive;
+        color: #fff;
+        text-shadow: 0 5px #000;
       }
       &_inner {
         display: flex;

@@ -3,6 +3,18 @@
   .title {
     margin: 0;
     text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+  .title_al {
+    color: #fff;
+    text-shadow: 0 8px #000;
+  }
+  .container {
+    .description {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
   }
   .new_user {
     .form-group {

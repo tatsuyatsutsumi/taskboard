@@ -1,7 +1,15 @@
 <div class='signinPage'>
   <div class='container'>
-    <h1 class="title">TaskBoard</h1><br><br>
-   <div class="text-center"><%= render "devise/shared/links" %></div>
+    <h1 class="title">Task  <span class="title_al">Board</span></h1><br>
+    <div class="description">TaskBoardはタスク管理をするためのサイトです。</div><br><br>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group text-center">
+        <%= f.hidden_field :email, value: "tester@example.jp" %>
+        <%= f.hidden_field :password, value: "tester" %>
+        <%= f.submit "簡単ログイン", class: "btn btn-warning"%> <br><br>
+      </div>
+    <% end %>
+    <div class="text-center"><%= render "devise/shared/links" %></div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.label :email %><br />
@@ -11,20 +19,15 @@
       <div class="form-group">
         <%= f.label :password %><br />
         <%= f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"  %>
-      </div<br><br><br><br>
+      </div><br>
 
       <div class="form-group text-center">
-        <%= f.submit "会員ログイン", class: "btn btn-primary" %>&nbsp;&nbsp;&nbsp;
-        <%= link_to "アカウント登録", new_registration_path(resource_name), class: "btn btn-success" %> <br> <br>
-      </div>
-    <% end %>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.submit "会員ログイン", class: "btn btn-primary" %>
+      </div><br>
       <div class="form-group text-center">
-        <%= f.hidden_field :email, value: "tester@example.jp" %>
-        <%= f.hidden_field :password, value: "tester" %>
-        <%= f.submit "簡単ログイン", class: "btn btn-warning"%> <br><br><br>
-      </div>
+        <%= link_to "アカウント登録", new_registration_path(resource_name), class: "btn btn-success" %> <br><br><br>
+      </div><br><br><br><br>
     <% end %>
   </div>
+  <div class="copyright">&nbsp;&nbsp;© TaskBoard</div><br>
 </div>
-<div class="copyright">&nbsp;&nbsp;© TaskBoard</div>
