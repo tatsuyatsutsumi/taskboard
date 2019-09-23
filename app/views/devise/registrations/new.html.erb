@@ -24,17 +24,17 @@
       <div class="form-group">
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class:"form-control", placeholder: "パスワードを再度入力してください", autocomplete: "off" %>
-      </div>
+      </div><br><br>
       <div class="text-center">
-        <%= f.submit "アカウント登録", class: "btn btn-success" %><br><br><br>
+        <%= f.submit "アカウント登録", class: "btn btn-success btn-lg" %><br><br><br><br>
       </div>
     <% end %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group text-center">
-        <%= link_to "会員ログイン", new_session_path(resource_name), class: "btn btn-primary" %>&nbsp;&nbsp;&nbsp;
+        <%= link_to "会員ログイン", new_session_path(resource_name), class: "btn btn-primary btn-lg" %>&nbsp;&nbsp;&nbsp;
         <%= f.hidden_field :email, value: "tester@example.jp" %>
         <%= f.hidden_field :password, value: "tester" %>
-        <%= f.submit "簡単ログイン", class: "btn btn-warning"%>
+        <%= f.submit "簡単ログイン", class: "btn btn-warning btn-lg"%>
       </div>
     <% end %><br><br>
   </div>

@@ -19,7 +19,7 @@
         &.edit_btn {
           max-width: 200px;
           margin: 0 auto;
-          background: #026aa7;
+          background: #3172ef;
           padding: 7px;
           border-radius: 10px;
           color: #fff;
@@ -29,13 +29,20 @@
             opacity: .7;
           }
         }
-
-        /* ==========ここから追加する========== */
         &.delete_btn {
           margin-top: 20px;
+          max-width: 200px;
+          margin: 0 auto;
+          background: #ff00ba;
+          padding: 7px;
+          border-radius: 10px;
+          color: #fff;
+          transition: opacity .5s;
+          text-decoration: none;
+          &:hover {
+            opacity: .7;
+          }
         }
-        /* ==========ここまで追加する========== */
-
       }
     }
   }

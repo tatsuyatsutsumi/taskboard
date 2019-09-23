@@ -1,0 +1,10 @@
+<div class="listeditPage">
+  <div class="text-center"><br><br>
+    <div>▼リスト名</div><br><br>
+    <div class="container">
+      <h3><%= @list.title %></h3><br><br><br>
+    </div>
+    <%= link_to '編集', edit_list_path(@list), class: 'btn btn-warning btn' %>&nbsp;&nbsp;&nbsp;
+    <%= link_to "削除", @list, method: :delete, data: { confirm: "削除してよろしいですか？" }, class: 'btn btn-danger btn' %>
+  </div>
+</div>
